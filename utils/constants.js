@@ -1,0 +1,1 @@
+export const ALLOWED_IMAGE_TYPES=["image/jpeg","image/png","image/gif","image/webp"];export const MAX_FILE_SIZE=5242880;export const UPLOAD_DIRS={PROFILE_PICTURES:"profile-pictures",DOCUMENTS:"documents",ATTACHMENTS:"attachments"};export const SECURITY={MAX_LOGIN_ATTEMPTS:5,LOCKOUT_TIME:9e5,PASSWORD_RESET_EXPIRY:864e5,TOKEN_EXPIRY:"20h"};

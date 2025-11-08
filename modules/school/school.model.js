@@ -1,0 +1,1 @@
+import mongoose from"mongoose";const{Schema:Schema}=mongoose,schoolSchema=new Schema({name:String,address:String,website:String,status:String,settings:String,payment:String,is_deleted:{type:Boolean,default:!1},date_deleted:{type:Date,default:""}},{timestamps:!0}),School=mongoose.model("School",schoolSchema);export default School;

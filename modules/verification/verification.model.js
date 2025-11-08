@@ -1,0 +1,1 @@
+import mongoose from"mongoose";const{Schema:Schema}=mongoose,verificationSchema=new Schema({token:String,email_address:String,status:String},{timestamps:!0}),Verification=mongoose.model("Verification",verificationSchema);export default Verification;

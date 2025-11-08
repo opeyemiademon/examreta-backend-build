@@ -1,0 +1,1 @@
+import mongoose from"mongoose";const{Schema:Schema}=mongoose,subjectSchema=new Schema({school:[{type:Schema.Types.ObjectId,ref:"School"}],title:String},{timestamps:!0}),Subject=mongoose.model("Subject",subjectSchema);export default Subject;

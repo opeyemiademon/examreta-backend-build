@@ -1,0 +1,1 @@
+export const settings={name:"Examreta",logo:"https://cloud.mongodb.com/static/images/logo-mongodb-atlas.png",address:"512 2nd Street, FL2, San Francisco, CA 94107",website:"www.examreta.com",email:"opeyemiademon@gmail.com",telephone:"08032950881"};export const include={TOKEN_SECRET:"tokensecret"};
