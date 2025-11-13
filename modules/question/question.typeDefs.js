@@ -106,7 +106,7 @@ type Question {
   staff: [Staff]
   school: [School]
   type: QuestionType!
-  
+  mainQuestionId: ID
   # Common fields
   question: String
   content: String
@@ -214,6 +214,7 @@ input AddQuestionInput {
   type: QuestionType!
   
   # Common fields
+  mainQuestionId: ID
   question: String
   tip:String
   content: String
@@ -307,6 +308,7 @@ type Query {
   questions: [Question]
   getQuestionById(id: ID!): Question
   getQuestionsByIds(ids: [ID]!): [Question]
+  getSubQuestions(mainQuestionId: ID!): [Question]
   getQuestionsByType(type: QuestionType!): [Question]
   getQuestionTags: [String]
   getQuestionsInExcel(count: Int): String

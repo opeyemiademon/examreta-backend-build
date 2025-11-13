@@ -95,6 +95,13 @@ enum FullScreenConsequence {
 }
 
 # Sub-types
+type Section {
+  id: String!
+  title: String!
+  description: String
+  questionIds: [String]!
+}
+
 type StudentInfo {
   firstName: Boolean
   lastName: Boolean
@@ -186,6 +193,8 @@ type Exam {
   freeFormContent: String
   pdfFile: String
   settings: ExamSettings
+  sections: [Section]
+  useSections: Boolean
   status: ExamStatus
   is_deleted: Boolean
   date_deleted: String
@@ -194,6 +203,13 @@ type Exam {
 }
 
 # Input types
+input SectionInput {
+  id: String!
+  title: String!
+  description: String
+  questionIds: [String]!
+}
+
 input StudentInfoInput {
   firstName: Boolean
   lastName: Boolean
@@ -281,6 +297,8 @@ input AddExamInput {
   pdfFile: String
   pdfFileBase64: String
   settings: ExamSettingsInput
+  sections: [SectionInput]
+  useSections: Boolean
   status: ExamStatus
 }
 
@@ -296,6 +314,8 @@ input UpdateExamInput {
   pdfFile: String
   pdfFileBase64: String
   settings: ExamSettingsInput
+  sections: [SectionInput]
+  useSections: Boolean
   status: ExamStatus
 }
 
