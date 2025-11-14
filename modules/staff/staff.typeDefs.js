@@ -4,6 +4,7 @@ type ResponsePayload {
     status: Int!
   type: String 
   message:String!
+  data:String
 }
 
 

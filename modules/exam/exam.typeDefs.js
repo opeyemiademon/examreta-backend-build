@@ -354,5 +354,5 @@ type Mutation {
   removeQuestionsFromExam(examId: ID!, questionIds: [ID]!): ResponsePayload
   updateMultipleExamsStatus(data: [ID], status: ExamStatus!): ResponsePayload
   moveExamsToGroup(data: MoveExamsGroupInput!): ResponsePayload
-}
-`;export default examTypeDefs;
+  handlePreviewExam(examId: ID!): ResponsePayload
+}`;export default examTypeDefs;
