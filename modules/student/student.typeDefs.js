@@ -349,6 +349,13 @@ input SubmitAnswerInput {
   attachments: JSON
 }
 
+input UploadAttachmentInput {
+  studentId: ID!
+  questionId: ID!
+  examKey: String!
+  imageBase64: String!
+}
+
 input UpdateSessionProgressInput {
   studentId: ID!
   sessionId: ID!
@@ -526,5 +533,6 @@ type Mutation {
   flagSessionForReview(studentId: ID!, sessionId: ID!, reason: String!): ResponsePayload
   addTeacherNotes(studentId: ID!,  notes: String!): ResponsePayload
   uploadStudentsByExcel(data: UploadStudentsInput!): ResponsePayload
+  uploadAttachment(data: UploadAttachmentInput!): ResponsePayload
 }
 `;export default studentTypeDefs;

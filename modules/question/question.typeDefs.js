@@ -313,7 +313,7 @@ type Query {
   getQuestionTags: [String]
   getQuestionsInExcel(count: Int): String
   exportQuestionsToExcel(questionIds: [ID], searchTerm: String, subject: ID, difficulty: String, tag: String, status: String): String
-  searchQuestions(subject: [ID], tag: [String], group_code: String, type: [QuestionType], difficulty: [DifficultyLevel]): [Question]
+  searchQuestions(subject: [ID], tag: [String], group_code: String, question_code: String, type: [QuestionType], difficulty: [DifficultyLevel]): [Question]
 
 }
 
