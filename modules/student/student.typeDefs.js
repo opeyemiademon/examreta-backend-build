@@ -485,6 +485,15 @@ type StudentLoginResponsePayload {
   token: String
 }
 
+input QuestionPointInput {
+  questionId: ID!
+  pointsAwarded: Float!
+}
+
+input UpdateQuestionPointsInput {
+  studentId: ID!
+  points: [QuestionPointInput!]!
+}
 
 # Queries
 type Query {
@@ -534,5 +543,7 @@ type Mutation {
   addTeacherNotes(studentId: ID!,  notes: String!): ResponsePayload
   uploadStudentsByExcel(data: UploadStudentsInput!): ResponsePayload
   uploadAttachment(data: UploadAttachmentInput!): ResponsePayload
+  updateQuestionPoints(data: UpdateQuestionPointsInput!): ResponsePayload
+  resumeSubmittedExam(studentId: ID!): ResponsePayload
 }
 `;export default studentTypeDefs;

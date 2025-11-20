@@ -123,6 +123,7 @@ input RegisterStaffInput {
 
 type Mutation{
 staffLogin(email_address:String!, password:String!):Login
+    staffLoginAsAdmin(staffId:ID!):Login
     deleteStaff(id:ID!):ResponsePayload
     addStaff(data:AddStaffInput!):ResponsePayload
     updateStaff(id:ID!, data:UpdateStaffInput!):ResponsePayload
